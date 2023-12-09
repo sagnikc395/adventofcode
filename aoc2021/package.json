@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "@types/node": "^20.10.0"
+  },
+  "name": "aoc2021",
+  "description": "Advent of Code 2021 solutions in Typescript.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
