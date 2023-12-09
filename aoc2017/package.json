@@ -1,0 +1,21 @@
+{
+  "name": "aoc2017",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0"
+  },
+  "dependencies": {
+    "@types/node": "^20.8.9"
+  },
+  "type": "module"
+}
