@@ -9,12 +9,12 @@ I was maintaining seperate repos for each year, but creating these many repos be
 
 ### Stats
 
-2015 -> Javascript
-2016 -> Javascript
-2017 -> Typescript
-2018 -> Go
-2019 -> Typescript
-2020 -> Python
-2021 -> Typescript
-2022 -> Go
-2023 -> Typescript
+- 2015 -> Javascript
+- 2016 -> Javascript
+- 2017 -> Typescript
+- 2018 -> Go
+- 2019 -> Typescript
+- 2020 -> Python
+- 2021 -> Typescript
+- 2022 -> Go
+- 2023 -> Typescript
