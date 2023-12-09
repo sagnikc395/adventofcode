@@ -1,3 +1,3 @@
 ## aoc2015 
 
-Advent of Code in Javascript and Nodejs.
+Advent of Code in Javascript.
