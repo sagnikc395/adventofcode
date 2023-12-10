@@ -14,7 +14,7 @@ I was maintaining seperate repos for each year, but creating these many repos be
 - 2017 -> Typescript
 - 2018 -> Go
 - 2019 -> Typescript
-- 2020 -> Python
+- 2020 -> Typescript
 - 2021 -> Typescript
 - 2022 -> Go
 - 2023 -> Typescript
