@@ -1,43 +1,41 @@
 import * as fs from "node:fs/promises";
 
-function parseCubes(cube: string) {
-  const [amount, color] = cube.trim().split(" ");
-  return {
-    color,
-    amount: +amount,
-  };
-}
+const countGames = (cubesub: string): boolean => {
+  const items = cubesub.split(",");
+  let red = 0;
+  let green = 0;
+  let blue = 0;
+  for (let i = 0; i < items.length; i++) {
+    let [qty, type] = items[i].split(" ");
+    if (type === "blue") {
+      blue += parseInt(qty);
+    } else if (type === "red") {
+      red += parseInt(qty);
+    } else if (type === "green") {
+      green += parseInt(qty);
+    }
+  }
+  console.log(blue, red, green);
+  if (red <= 12 && blue <= 14 && green <= 13) {
+    return true;
+  }
+  return false;
+};
 
 async function main() {
-  const fileData = (await fs.readFile("./input.txt", "utf-8"))
-    .trim()
-    .split("\n");
-
-  const groups = fileData.map((line) => {
-    const content = line.split(":", 2)[1];
-    return content.split(";").map((s) => s.trim().split(", "));
-  });
-
-  const sum = groups.reduce((acc, group, i) => {
-    const gameIsPossible = group.every((set) =>
-      set.every((cube) => {
-        const parsed = parseCubes(cube);
-        return (
-          (parsed.color === "red" && parsed.amount <= 12) ||
-          (parsed.color === "green" && parsed.amount <= 13) ||
-          (parsed.color === "blue" && parsed.amount <= 14)
-        );
-      })
-    );
-
-    if (gameIsPossible) {
-      return acc + (i + 1);
+  const data = (await fs.readFile("./temp.txt", "utf-8")).trim().split("\n");
+  let result = 0;
+  data.forEach((game: string) => {
+    const [gameId, sess] = game.trim().split(":");
+    const cubeSub = sess.split(";");
+    for (let i = 0; i < cubeSub.length; i++) {
+      if (countGames(cubeSub[i])) {
+        const [gamestr, id] = gameId.split(" ");
+        result += parseInt(id);
+      }
     }
-
-    return acc;
-  }, 0);
-
-  console.log(sum);
+  });
+  console.log(result);
 }
 
 await main();
